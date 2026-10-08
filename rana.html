@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Md Rana Ahamed – Digital Marketer</title>
+<meta name="description" content="Md Rana Ahamed is a digital marketer who grows online businesses with paid ads, SEO, email and social media.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#EEF2F5; --card:#FFFFFF; --ink:#101828; --muted:#4B5A6B; --line:#CBD5DF;
+  --accent:#2F54EB; --on-accent:#FFFFFF; --pop:#FFC83D; --on-pop:#101828;
+  --display:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1420; --card:#151E2E; --ink:#E8EEF5; --muted:#9FB0C3; --line:#26334A;
+    --accent:#7C9BFF; --on-accent:#0E1420;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1420; --card:#151E2E; --ink:#E8EEF5; --muted:#9FB0C3; --line:#26334A;
+  --accent:#7C9BFF; --on-accent:#0E1420;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:28px}
+p{margin:0 0 1em;max-width:62ch}
+
+header.top{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none}
+nav a{margin-left:22px;text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+@media(max-width:620px){nav a:not(.keep){display:none}}
+
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding:56px 0 88px}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:40px;padding-top:32px}}
+.hero h1{font-size:clamp(2.7rem,7.5vw,5.4rem);font-weight:800}
+.hero .lede{font-size:1.2rem;color:var(--muted);margin:24px 0 32px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.primary:hover{filter:brightness(1.1)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+
+.funnel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:26px}
+.funnel h3{font-size:1rem;font-weight:700;color:var(--muted);margin-bottom:18px;letter-spacing:0}
+.stage{margin-bottom:14px}
+.stage:last-child{margin-bottom:0}
+.stage .meta{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:5px}
+.stage .meta b{font-weight:600}
+.bar{height:26px;border-radius:8px;background:var(--accent);width:var(--w);transform-origin:left;animation:grow 1.1s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--d)}
+.stage:last-child .bar{background:var(--pop)}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.funnel small{display:block;margin-top:16px;color:var(--muted);font-size:.82rem}
+
+section{padding:72px 0;border-top:1px solid var(--line)}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:36px 32px}
+.services h3{font-size:1.3rem;font-weight:700;margin-bottom:8px}
+.services p{color:var(--muted);margin:0}
+
+.work{list-style:none;margin:0;padding:0}
+.work li{display:grid;grid-template-columns:1.1fr 1.4fr .8fr;gap:20px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+.work li:first-child{border-top:1px solid var(--line)}
+.work h3{font-size:1.3rem;font-weight:700}
+.work .tag{display:block;color:var(--muted);font-size:.9rem;margin-top:6px}
+.work p{margin:0;color:var(--muted)}
+.work .result{font-family:var(--display);font-weight:800;font-size:2rem;line-height:1;letter-spacing:-.02em}
+.work .result span{display:block;font-family:var(--body);font-weight:400;font-size:.85rem;color:var(--muted);letter-spacing:0;margin-top:6px}
+@media(max-width:760px){.work li{grid-template-columns:1fr;gap:10px}}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none}
+.chips li{padding:8px 16px;border:1px solid var(--line);background:var(--card);border-radius:999px;font-size:.95rem}
+
+.contact{background:var(--accent);color:var(--on-accent);border-radius:28px;padding:56px 40px;margin:24px 0 56px}
+.contact h2{margin-bottom:12px}
+.contact p{opacity:.92}
+.contact .btn{background:var(--pop);border-color:var(--pop);color:var(--on-pop)}
+.contact .btn.ghost{background:transparent;border-color:currentColor;color:inherit}
+.contact .btn.ghost:hover{background:var(--on-accent);color:var(--accent)}
+footer{padding:0 0 40px;color:var(--muted);font-size:.9rem}
+
+@media(prefers-reduced-motion:reduce){.bar{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="logo" href="#top">Md Rana Ahamed</a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a class="keep" href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div>
+        <h1>I turn clicks into customers.</h1>
+        <p class="lede">I'm Md Rana Ahamed, a digital marketer who helps online businesses get found, get clicks and get paid. Paid ads, SEO, email and social, tied to numbers you can check.</p>
+        <div class="btns">
+          <a class="btn primary" href="#contact">Work with me</a>
+          <a class="btn ghost" href="#work">See my results</a>
+        </div>
+      </div>
+      <div class="funnel" role="img" aria-label="Example marketing funnel from impressions to customers">
+        <h3>A funnel I build and tune</h3>
+        <div class="stage"><div class="meta"><b>Impressions</b><span>100,000</span></div><div class="bar" style="--w:100%;--d:.2s"></div></div>
+        <div class="stage"><div class="meta"><b>Clicks</b><span>3,800</span></div><div class="bar" style="--w:64%;--d:.45s"></div></div>
+        <div class="stage"><div class="meta"><b>Leads</b><span>760</span></div><div class="bar" style="--w:38%;--d:.7s"></div></div>
+        <div class="stage"><div class="meta"><b>Customers</b><span>152</span></div><div class="bar" style="--w:16%;--d:.95s"></div></div>
+        <small>Sample numbers for illustration.</small>
+      </div>
+    </div>
+
+    <section id="services">
+      <h2>What I do</h2>
+      <div class="services">
+        <div><h3>Paid advertising</h3><p>Meta, Google and TikTok campaigns built around cost per sale, not vanity reach.</p></div>
+        <div><h3>SEO and content</h3><p>Keyword research, on-page fixes and articles that bring in steady organic traffic.</p></div>
+        <div><h3>Email and automation</h3><p>Welcome flows, abandoned-cart emails and newsletters that bring buyers back.</p></div>
+        <div><h3>Social media</h3><p>Content plans and community management that turn followers into customers.</p></div>
+        <div><h3>Analytics and reporting</h3><p>Clean tracking and plain-language reports so you always know what's working.</p></div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>Selected work</h2>
+      <ul class="work">
+        <li>
+          <div><h3>Online fashion store</h3><span class="tag">Meta Ads, retargeting</span></div>
+          <p>Rebuilt the ad structure, split audiences by intent and added retargeting for cart abandoners.</p>
+          <div class="result">3.8x<span>return on ad spend</span></div>
+        </li>
+        <li>
+          <div><h3>Home goods brand</h3><span class="tag">SEO, blog content</span></div>
+          <p>Fixed technical issues, rewrote product pages and published a monthly guide series.</p>
+          <div class="result">+240%<span>organic traffic in 6 months</span></div>
+        </li>
+        <li>
+          <div><h3>Beauty subscription</h3><span class="tag">Email automation</span></div>
+          <p>Set up welcome, win-back and post-purchase flows with tested subject lines.</p>
+          <div class="result">28%<span>of revenue from email</span></div>
+        </li>
+      </ul>
+      <p style="margin-top:20px;color:var(--muted);font-size:.9rem">Replace these sample projects with your real clients and results.</p>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <div>
+          <h2>About me</h2>
+          <p>I'm a digital marketer from Bangladesh. I work with e-commerce brands and small businesses that want growth they can measure.</p>
+          <p>I start with the numbers: where visitors come from, where they drop off and what each sale costs. Then I fix the biggest leak first, test, and report back in plain language.</p>
+        </div>
+        <div>
+          <h2>Tools I use</h2>
+          <ul class="chips">
+            <li>Meta Ads Manager</li><li>Google Ads</li><li>Google Analytics 4</li><li>Search Console</li>
+            <li>Semrush</li><li>Klaviyo</li><li>Mailchimp</li><li>Shopify</li><li>Canva</li><li>Looker Studio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="border-top:0;padding-top:24px">
+      <div class="contact">
+        <h2>Let's grow your business</h2>
+        <p>Tell me what you sell and what you want to improve. I'll reply within one working day.</p>
+        <div class="btns">
+          <a class="btn" href="mailto:hello@example.com">Email me</a>
+          <a class="btn ghost" href="https://wa.me/">Message on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Md Rana Ahamed. All rights reserved.</footer>
+</div>
+</body>
+</html>
